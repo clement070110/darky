@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Multiplayer platformer stats</title>
+    <link rel="stylesheet" href="modify.css">
+  </head>
+  <body>
+    <h1>Game Stats</h1>
+    <div>
+      <canvas id="chart1" class="chart-placeholder"></canvas>
+    </div>
+    <div id="stats-div">
+      <p id="onlinePlayers" class="stat">Loading...</p>
+    </div>
+    <script src="https://darky.cldprv.repl.co/socket.io/socket.io.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+      console.log("Okay")
+      const socket = io("https://darky.cldprv.repl.co/stats");
+      let data = [0, 0, 0, 0, 0, 0];
+      socket.on("data", (last_hours, nb) => {
+        data = last_hours;
+        chart1.data.datasets[0].data = data;
+        document.getElementById("onlinePlayers").innerHTML = "Online players : "+nb;
+        chart1.update()
+      });
+const ctx = document.getElementById('chart1');
+chart1 = new Chart(ctx, {
+  type: 'line',
+  data: {
+    labels: ['5h ago', '4h ago', '3h ago', '2h ago', '1h ago', 'This hour'], 
+    datasets: [{
+      label: 'Max amount players at same moment',
+      data: data,
+      borderWidth: 2,
+      tension: 0.3,
+      fill: true,
+      pointRadius: 5,
+      pointHoverRadius : 7,
+      pointHitRadius : 30
+    }]
+  },
+  options: {
+    scales: {
+      y: {
+        beginAtZero: true
+      }
+    },
+    plugins: {
+      legend: {
+        display: true,
+        labels: {
+          color: 'rgb(80, 80, 80)'
+        }
+      }
+    }
+  }
+});
+
+    </script>
+  </body>
+</html>

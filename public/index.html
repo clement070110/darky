@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multiplayer platformer</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/p5.min.js"></script>
+  <script src="/p5.sound.js"></script>
+</head>
+<body>
+  <!--<button id="back">back</button>-->
+  <div class="centerConnect">
+      <div id='connect'>
+        <h3>Username : </h3>
+        <input placeholder='Username' id="usernameInput" maxlength="15"></input>
+        <button id="playButton">Play</button><br>
+        <a href="/stats">stats</a><p style="display:inline">&nbsp;&nbsp;&nbsp;&nbsp;</p><a href="https://replit.com/@cldprv">developer</a>
+      </div>
+      
+    </div>
+  <div class="love">
+    <p>Love this game and follow me if you enjoy it :D</p>
+  </div>
+  <div class="alone" id="alone">
+    <p>Oh no, you're alone! Share now the link of the repl to your friends!</p>
+  </div>
+  <p class="nbPlayers" id="nbPlayers">1 online players</p>
+  <div id="sketch-holder"></div>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/collide.js"></script>
+  <script src="/settings.js"></script>
+   <script src="/objects/movingPlatform.js"></script>
+  <script src="/objects/lavaParticles.js"></script>
+  <script src="/objects/lavaPlatform.js"></script>
+  <script src="/objects/basicPlatform.js"></script>
+  <script src="/objects/lampadaire.js"></script>
+  <script src="/levels.js"></script>
+  <script src="/objects/player.js"></script>
+  <script src="/objects/otherPlayer.js"></script>
+  <script src="/index.js"></script>
+  <!--<div class="chat" id="chat"><p><span>Server : </span>Hello!</p><input id="chatInput" placeholder="Type here..." maxlength="20"></div>-->
+</body>
+</html>

@@ -1,0 +1,28 @@
+{
+  "files": {
+    "index.js": [
+      {
+        "id": "5b2a385c-bc97-4e40-adb7-c631f003f5af",
+        "line": 1,
+        "version": 123,
+        "index": 0
+      }
+    ],
+    "public/index.js": [
+      {
+        "id": "9285f8fa-697c-485a-8917-4046d1efbce9",
+        "line": 1,
+        "version": 473,
+        "index": 0
+      }
+    ],
+    "public/objects/lampadaire.js": [
+      {
+        "id": "ee936484-2639-4a00-979e-335ff5d0fba2",
+        "line": 42,
+        "version": 1359,
+        "index": 1561
+      }
+    ]
+  }
+}

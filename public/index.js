@@ -1,5 +1,4 @@
 const socket = io()
-
 let player;
 let gameStarted = false;
 let level = 1;

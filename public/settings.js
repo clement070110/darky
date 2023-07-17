@@ -5,7 +5,7 @@ let settings = {
   gameHeight : 800,
 }
 let colors = {
-  black : '#111111',
+  black : '#000',
   lightDark : '#181818',
   grey : '#444444',
   lightOrange : '#ff9933',

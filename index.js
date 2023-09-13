@@ -70,7 +70,7 @@ function sendPos() {
 
 setInterval(function (){
   sendPos();
-},200);
+},2000);
 //Namespace for stats
 const stats = io.of("/stats")
 

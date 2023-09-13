@@ -13,9 +13,9 @@ let music;
 
 function preload() {
   //Load music
-  soundFormats('mp3', 'ogg');
-  music = loadSound('/sounds/music')
-  music.setLoop(true)
+  //soundFormats('mp3', 'ogg');
+  //music = loadSound('/sounds/music')
+  //music.setLoop(true)
 }
 let username = 'player' + Math.floor(Math.random() * 1000).toString();
 console.log(username);
@@ -34,7 +34,7 @@ function setup() {
   createLevel(level);
   gameStarted = true;
   //Play music
-  music.play()
+  //music.play()
   if(localStorage.getItem("name")) {
     username = localStorage.getItem("name");
     document.getElementById("usernameInput").value = username;
@@ -62,6 +62,7 @@ function game() {
   
 }
 function closeMenu() {
+	document.getElementById("title").style.display="none";
   let a = document.getElementById("connect");
   a.classList.remove("animation");
   a.offsetWidth;

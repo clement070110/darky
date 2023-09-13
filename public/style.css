@@ -6,7 +6,30 @@ body, html{
   -moz-user-select:none;
   background-color:#000000;
 }
-
+@keyframes hello{
+	from{
+		opacity:0;
+	}
+	to{
+		opacity:1;
+	}
+}
+h1{
+	position:fixed;
+	z-index:100000000000;
+	top:30px;
+	font-size:5vmin;
+	text-align:center;
+	color:white;
+	font-family:monospace;
+	left:50%;
+	opacity:0;
+	animation-fill-mode:forwards;
+	transform: translateX(-50%);
+	animation-name:hello;
+	animation-duration:1.5s;
+	animation-delay:0.5s;
+}
 /*Sketch holder*/
 #sketch-holder {
   margin:0;
@@ -174,7 +197,7 @@ body, html{
   animation-fill-mode: forwards;  
   position:fixed;
   box-shadow:0 0 30px #134d65;
-  width:300px;
+  width:280px;
   max-width:83%;
   font-size:20px;
   padding: 0px 10px 20px 10px;
